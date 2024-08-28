@@ -1,0 +1,5 @@
+package com.bookstoree.service;
+
+public class MetricService {
+
+}

@@ -1,0 +1,244 @@
+package com.onlinebookstoree.model;
+
+import java.util.Set;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
+
+import org.hibernate.cache.MutableCacheKeyBuilder;
+import org.hibernate.engine.FetchTiming;
+import org.hibernate.engine.spi.SharedSessionContractImplementor;
+import org.hibernate.internal.util.IndexedConsumer;
+import org.hibernate.metamodel.mapping.EntityAssociationMapping;
+import org.hibernate.metamodel.mapping.EntityMappingType;
+import org.hibernate.metamodel.mapping.ForeignKeyDescriptor;
+import org.hibernate.metamodel.mapping.ForeignKeyDescriptor.Nature;
+import org.hibernate.metamodel.mapping.JdbcMapping;
+import org.hibernate.metamodel.mapping.MappingType;
+import org.hibernate.metamodel.mapping.ModelPart;
+import org.hibernate.metamodel.model.domain.NavigableRole;
+import org.hibernate.spi.NavigablePath;
+import org.hibernate.sql.ast.SqlAstJoinType;
+import org.hibernate.sql.ast.spi.SqlAliasBase;
+import org.hibernate.sql.ast.spi.SqlAstCreationState;
+import org.hibernate.sql.ast.spi.SqlSelection;
+import org.hibernate.sql.ast.tree.from.TableGroup;
+import org.hibernate.sql.ast.tree.from.TableGroupJoin;
+import org.hibernate.sql.ast.tree.predicate.Predicate;
+import org.hibernate.sql.results.graph.DomainResult;
+import org.hibernate.sql.results.graph.DomainResultCreationState;
+import org.hibernate.sql.results.graph.Fetch;
+import org.hibernate.sql.results.graph.FetchOptions;
+import org.hibernate.sql.results.graph.FetchParent;
+import org.hibernate.type.descriptor.java.JavaType;
+
+public class Book implements EntityAssociationMapping {
+
+	@Override
+	public NavigableRole getNavigableRole() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getPartName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public MappingType getPartMappingType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public JavaType<?> getJavaType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean hasPartitionedSelectionMapping() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public <T> DomainResult<T> createDomainResult(NavigablePath navigablePath, TableGroup tableGroup,
+			String resultVariable, DomainResultCreationState creationState) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void applySqlSelections(NavigablePath navigablePath, TableGroup tableGroup,
+			DomainResultCreationState creationState) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void applySqlSelections(NavigablePath navigablePath, TableGroup tableGroup,
+			DomainResultCreationState creationState, BiConsumer<SqlSelection, JdbcMapping> selectionConsumer) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public <X, Y> int breakDownJdbcValues(Object domainValue, int offset, X x, Y y,
+			JdbcValueBiConsumer<X, Y> valueConsumer, SharedSessionContractImplementor session) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public EntityMappingType findContainingEntityMapping() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Object disassemble(Object value, SharedSessionContractImplementor session) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void addToCacheKey(MutableCacheKeyBuilder cacheKey, Object value, SharedSessionContractImplementor session) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public <X, Y> int forEachDisassembledJdbcValue(Object value, int offset, X x, Y y,
+			JdbcValuesBiConsumer<X, Y> valuesConsumer, SharedSessionContractImplementor session) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public JdbcMapping getJdbcMapping(int index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int forEachJdbcType(int offset, IndexedConsumer<JdbcMapping> action) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public ForeignKeyDescriptor getForeignKeyDescriptor() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Nature getSideNature() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getFetchableKey() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public FetchOptions getMappedFetchOptions() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Fetch generateFetch(FetchParent fetchParent, NavigablePath fetchablePath, FetchTiming fetchTiming,
+			boolean selected, String resultVariable, DomainResultCreationState creationState) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public SqlAstJoinType getDefaultSqlAstJoinType(TableGroup parentTableGroup) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean isSimpleJoinPredicate(Predicate predicate) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public TableGroupJoin createTableGroupJoin(NavigablePath navigablePath, TableGroup lhs, String explicitSourceAlias,
+			SqlAliasBase explicitSqlAliasBase, SqlAstJoinType sqlAstJoinType, boolean fetched, boolean addsPredicate,
+			SqlAstCreationState creationState) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public TableGroup createRootTableGroupJoin(NavigablePath navigablePath, TableGroup lhs, String explicitSourceAlias,
+			SqlAliasBase explicitSqlAliasBase, SqlAstJoinType sqlAstJoinType, boolean fetched,
+			Consumer<Predicate> predicateConsumer, SqlAstCreationState creationState) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getSqlAliasStem() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ModelPart findSubPart(String name, EntityMappingType treatTargetType) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void forEachSubPart(IndexedConsumer<ModelPart> consumer, EntityMappingType treatTarget) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void visitSubParts(Consumer<ModelPart> consumer, EntityMappingType treatTargetType) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public EntityMappingType getAssociatedEntityMappingType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Set<String> getTargetKeyPropertyNames() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ModelPart getKeyTargetMatchPart() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean isReferenceToPrimaryKey() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isFkOptimizationAllowed() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

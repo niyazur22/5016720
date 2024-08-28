@@ -1,0 +1,5 @@
+package com.onlinebookstoree.model;
+
+public @interface Entity {
+
+}
